@@ -99,9 +99,10 @@ def set_bg(image_file):
 set_bg("Image1.jpg")
 
 #loading saved models
-Liver_model= pickle.load(open('Liver3.pkl','rb'))
-Breast_cancer_model = pickle.load(open('breast_cancer4.pkl','rb'))
 Kidney_model= pickle.load(open('kidney3.pkl','rb'))
+Breast_cancer_model = pickle.load(open('breast_cancer4.pkl','rb'))
+Liver_model= pickle.load(open('Liver3.pkl','rb'))
+
 Parkinsons_model = pickle.load(open('Parkinsons_disease.pkl','rb'))
 
 
@@ -111,13 +112,13 @@ with st.sidebar:
     selected = option_menu('Integrated Disease Prediction System',
                            [
                               
-                            'Liver Disease Prediction',
-                            'Breast Cancer Prediction',
                             'Kidney Disease Prediction',
+                            'Breast Cancer Prediction',
+                            'Liver Disease Prediction',
                             'Parkinsons Disease Prediction'
                             ],
                            #icons=['activity','heart-pulse','person-wheelchair','person'],
-                           icons=['capsule', 'heart-pulse', 'droplet', 'person-standing'],
+                           icons=['droplet', 'heart-pulse', 'capsule', 'person-standing'],
                            default_index=0,
                            menu_icon="hospital",
                            styles={
@@ -147,44 +148,7 @@ with st.sidebar:
     #st.title('Kidney Disease Prediction')"""
     #Age	Gender	Total_Bilirubin	Alkaline_Phosphotase	Alamine_Aminotransferase	Aspartate_Aminotransferase	Total_Protiens	Albumin	Albumin_and_Globulin_Ratio
 
-if (selected == 'Liver Disease Prediction'):
-    st.title('Liver Disease Prediction')
-   
-    #st.markdown("<h1>Liver Disease Prediction</h1>", unsafe_allow_html=True)
 
-    col1,col2,col3 = st.columns(3)
-    with col1:
-        Age=st.text_input("Age")
-    with col2:
-        Gender=st.text_input("Gender")
-    with col3:
-        Total_Bilirubin=st.text_input("Total_Bilirubin")
-    with col1:
-        Alkaline_Phosphotase=st.text_input("Alkaline_Phosphotase")
-    with col2:
-        Alamine_Aminotransferase=st.text_input("Alamine_Aminotransferase")
-    with col3:
-        Aspartate_Aminotransferase=st.text_input("Aspartate_Aminotransferase")
-    with col1:
-        Total_Protiens=st.text_input("Total_Protiens")
-    with col2:
-        Albumin=st.text_input("Albumin")
-    with col3:
-        Albumin_and_Globulin_Ratio=st.text_input("Albumin_and_Globulin_Ratio")
-
-
-#code for prediction   
-    liver_diagnosis =''
-#creating button for prediction
-    if st.button('Liver disease Result'):
-        liver_prediction =Liver_model.predict([[ Age,	Gender	,Total_Bilirubin,	Alkaline_Phosphotase,	Alamine_Aminotransferase,	Aspartate_Aminotransferase,	Total_Protiens,	Albumin,Albumin_and_Globulin_Ratio
-    ]])
-        
-        if(liver_prediction[0]==1):
-            liver_diagnosis="You are having Liver Disease"
-        else:
-            liver_diagnosis="You are not  having Liver Disease"
-    st.success(liver_diagnosis)
 
 
 
@@ -194,42 +158,6 @@ if (selected == 'Liver Disease Prediction'):
 #radius_mean perimeter_mean area_mean concave points_mean radius_worst concave points_worst
 
 
-if selected == ('Breast Cancer Prediction'):
-    st.title('Breast Cancer Prediction')
-    col1,col2= st.columns(2)
-    with col1:
-        radius_mean=st.text_input("radius_mean")
-    with col2:
-       perimeter_mean=st.text_input(" perimeter_mean")
-    with col1:
-        area_mean=st.text_input("area_mean")
-    with col2:
-        concave_points_mean=st.text_input("concave_points_mean")
-    with col1:
-        radius_worst=st.text_input("radius_worst")
-    with col2:
-        concave_points_worst=st.text_input("concave_points_worst")
-        
-    #code for prediction
-    Breastcancer_diagnosis =''
-
-    #creating button for prediction
-
-    if st.button('Breast disease Result'):
-        Breast_prediction =Breast_cancer_model.predict([[ radius_mean, perimeter_mean, area_mean, concave_points_mean, radius_worst, concave_points_worst
-
-    ]])
-        
-        if(Breast_prediction[0]==0):
-            Breastcancer_diagnosis="You are not having Breast Cancer Disease"
-        else:
-            Breastcancer_diagnosis="You are having Breast cancer Disease"
-    st.success(Breastcancer_diagnosis)
-
-    #st.markdown("<h1>Breast Cancer Prediction</h1>", unsafe_allow_html=True)
-
-    
-#age bp al su bgr bu sc htn dm
 if selected == 'Kidney Disease Prediction':
     st.title('kidney Disease Prediction')
     
@@ -269,6 +197,86 @@ if selected == 'Kidney Disease Prediction':
 
 
     st.success(kidney_diagnosis)
+
+
+if selected == 'Breast Cancer Prediction':
+    st.title('Breast Cancer Prediction')
+    col1,col2= st.columns(2)
+    with col1:
+        radius_mean=st.text_input("radius_mean")
+    with col2:
+       perimeter_mean=st.text_input(" perimeter_mean")
+    with col1:
+        area_mean=st.text_input("area_mean")
+    with col2:
+        concave_points_mean=st.text_input("concave_points_mean")
+    with col1:
+        radius_worst=st.text_input("radius_worst")
+    with col2:
+        concave_points_worst=st.text_input("concave_points_worst")
+        
+    #code for prediction
+    Breastcancer_diagnosis =''
+
+    #creating button for prediction
+
+    if st.button('Breast disease Result'):
+        Breast_prediction =Breast_cancer_model.predict([[ radius_mean, perimeter_mean, area_mean, concave_points_mean, radius_worst, concave_points_worst
+
+    ]])
+        
+        if(Breast_prediction[0]==0):
+            Breastcancer_diagnosis="You are not having Breast Cancer Disease"
+        else:
+            Breastcancer_diagnosis="You are having Breast cancer Disease"
+    st.success(Breastcancer_diagnosis)
+
+    #st.markdown("<h1>Breast Cancer Prediction</h1>", unsafe_allow_html=True)
+
+
+
+if selected == 'Liver Disease Prediction':
+    st.title('Liver disease prediction')
+
+    #st.markdown("<h1>Liver Disease Prediction</h1>", unsafe_allow_html=True)
+
+    col1,col2,col3 = st.columns(3)
+    with col1:
+        Age=st.text_input("Age")
+    with col2:
+        Gender=st.text_input("Gender")
+    with col3:
+        Total_Bilirubin=st.text_input("Total_Bilirubin")
+    with col1:
+        Alkaline_Phosphotase=st.text_input("Alkaline_Phosphotase")
+    with col2:
+        Alamine_Aminotransferase=st.text_input("Alamine_Aminotransferase")
+    with col3:
+        Aspartate_Aminotransferase=st.text_input("Aspartate_Aminotransferase")
+    with col1:
+        Total_Protiens=st.text_input("Total_Protiens")
+    with col2:
+        Albumin=st.text_input("Albumin")
+    with col3:
+        Albumin_and_Globulin_Ratio=st.text_input("Albumin_and_Globulin_Ratio")
+
+
+#code for prediction   
+    liver_diagnosis =''
+#creating button for prediction
+    if st.button('Liver disease Result'):
+        liver_prediction =Liver_model.predict([[ Age,	Gender	,Total_Bilirubin,	Alkaline_Phosphotase,	Alamine_Aminotransferase,	Aspartate_Aminotransferase,	Total_Protiens,	Albumin,Albumin_and_Globulin_Ratio
+    ]])
+        
+        if(liver_prediction[0]==1):
+            liver_diagnosis="You are having Liver Disease"
+        else:
+            liver_diagnosis="You are not  having Liver Disease"
+    st.success(liver_diagnosis)
+
+    
+#age bp al su bgr bu sc htn dm
+
     #st.markdown("<h1>Kidney Disease Prediction</h1>", unsafe_allow_html=True)
     
 #MDVP:Fo(Hz)
