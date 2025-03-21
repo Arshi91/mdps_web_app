@@ -163,23 +163,23 @@ if selected == 'Kidney Disease Prediction':
     
     col1,col2 = st.columns(2)
     with col1:
-        age=st.text_input("age")
+        age=st.text_input("age(2 - 90)")
     with col2:
-        bp=st.text_input(" bp")
+        bp=st.text_input(" bp(50-180)")
     with col1:
-        albumin=st.text_input("albumin")
+        albumin=st.text_input("albumin(0-5)")
     with col2:
-        sugar=st.text_input("sugar")
+        sugar=st.text_input("sugar(0-5)")
     with col1:
-        blood_glucose_level=st.text_input("blood_glucose_level")
+        blood_glucose_level=st.text_input("blood_glucose_level(22-490)")
     with col2:
-        blood_urea=st.text_input(" blood_urea")
+        blood_urea=st.text_input(" blood_urea(1.5-391)")
     with col1:
-        Serum_Creatinine=st.text_input(" Serum_Creatinine")
+        Serum_Creatinine=st.text_input(" Serum_Creatinine(0.4-76)")
     with col2:
-        Hypertension=st.text_input(" Hypertension")
+        Hypertension=st.text_input(" Hypertension(0 or 1)")
     with col1:
-       Diabetes_Mellitus=st.text_input("Diabetes_Mellitus")
+       Diabetes_Mellitus=st.text_input("Diabetes_Mellitus(0 or 1)")
     #code for prediction
     kidney_diagnosis =''
 
