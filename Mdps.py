@@ -203,17 +203,17 @@ if selected == 'Breast Cancer Prediction':
     st.title('Breast Cancer Prediction')
     col1,col2= st.columns(2)
     with col1:
-        radius_mean=st.text_input("radius_mean")
+        radius_mean=st.text_input("radius_mean(6.981 - 28.11)")
     with col2:
-       perimeter_mean=st.text_input(" perimeter_mean")
+       perimeter_mean=st.text_input(" perimeter_mean(43.79 - 188.5)")
     with col1:
-        area_mean=st.text_input("area_mean")
+        area_mean=st.text_input("area_mean(143.5 - 2501.0)")
     with col2:
-        concave_points_mean=st.text_input("concave_points_mean")
+        concave_points_mean=st.text_input("concave_points_mean(0.0 - 0.2012)")
     with col1:
-        radius_worst=st.text_input("radius_worst")
+        radius_worst=st.text_input("radius_worst(7.93 - 36.04)")
     with col2:
-        concave_points_worst=st.text_input("concave_points_worst")
+        concave_points_worst=st.text_input("concave_points_worst(0.0 - 0.291)")
         
     #code for prediction
     Breastcancer_diagnosis =''
@@ -242,23 +242,23 @@ if selected == 'Liver Disease Prediction':
 
     col1,col2,col3 = st.columns(3)
     with col1:
-        Age=st.text_input("Age")
+        Age=st.text_input("Age(4 -90)")
     with col2:
-        Gender=st.text_input("Gender")
+        Gender=st.text_input("Gender( 0 or 1)")
     with col3:
-        Total_Bilirubin=st.text_input("Total_Bilirubin")
+        Total_Bilirubin=st.text_input("Total_Bilirubin(0.4 - 75.0)")
     with col1:
-        Alkaline_Phosphotase=st.text_input("Alkaline_Phosphotase")
+        Alkaline_Phosphotase=st.text_input("Alkaline_Phosphotase(63.0 - 2110.0)")
     with col2:
-        Alamine_Aminotransferase=st.text_input("Alamine_Aminotransferase")
+        Alamine_Aminotransferase=st.text_input("Alamine_Aminotransferase(10.0 - 2000.0)")
     with col3:
-        Aspartate_Aminotransferase=st.text_input("Aspartate_Aminotransferase")
+        Aspartate_Aminotransferase=st.text_input("Aspartate_Aminotransferase(10.0 - 4929.0)")
     with col1:
-        Total_Protiens=st.text_input("Total_Protiens")
+        Total_Protiens=st.text_input("Total_Protiens(2.7 - 9.6)")
     with col2:
-        Albumin=st.text_input("Albumin")
+        Albumin=st.text_input("Albumin(0.9 - 5.5)")
     with col3:
-        Albumin_and_Globulin_Ratio=st.text_input("Albumin_and_Globulin_Ratio")
+        Albumin_and_Globulin_Ratio=st.text_input("Albumin_and_Globulin_Ratio(0.3 - 2.8)")
 
 
 #code for prediction   
