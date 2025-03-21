@@ -293,37 +293,37 @@ if selected == 'Parkinsons Disease Prediction':
     
     col1,col2,col3,col4 = st.columns(4)
     with col1:
-        Fo=st.text_input("MDVP:Fo(Hz)")
+        Fo=st.text_input("MDVP:Fo(Hz)-(88.333 - 260.105)")
     with col2:
-        Fhi=st.text_input(" MDVP:Fhi(Hz)")
+        Fhi=st.text_input(" MDVP:Fhi(Hz)-(102.145 - 592.03)")
     with col3:
-        Flo =st.text_input("MDVP:Flo(Hz)")
+        Flo =st.text_input("MDVP:Flo(Hz)-(65.476 - 239.17)")
     with col4:
-        MDVP_jitter=st.text_input("MDVP:Jitter(%)")
+        MDVP_jitter=st.text_input("MDVP:Jitter(%)-(0.00168 - 0.03316)")
     with col1:
-        RAP = st.text_input("MDVP:RAP")
+        RAP = st.text_input("MDVP:RAP-(0.00068 - 0.02144)")
     with col2:
-        Shimmer=st.text_input("MDVP:Shimmer")
+        Shimmer=st.text_input("MDVP:Shimmer -(0.00954 - 0.11908)")
     with col3:
-       Shimmer_db=st.text_input("MDVP:Shimmer(dB)")
+       Shimmer_db=st.text_input("MDVP:Shimmer(dB) - (0.085 - 1.302)")
     with col4:
-        Shimmer_APQ5=st.text_input("Shimmer:APQ5")
+        Shimmer_APQ5=st.text_input("Shimmer:APQ5 -(0.0057 - 0.0794)")
     with col1:
-       NHR=st.text_input("NHR")
+       NHR=st.text_input("NHR - (0.00065 - 0.31482)")
     with col2:
-       HNR=st.text_input("HNR")
+       HNR=st.text_input("HNR - (8.441 - 33.047)")
     with col3:
-       RPDE=st.text_input("RPDE")
+       RPDE=st.text_input("RPDE- (0.25657 - 0.685151)")
     with col4:
-       DFA=st.text_input("DFA")
+       DFA=st.text_input("DFA- (0.574282 - 0.825288)")
     with col1:
-        spread1=st.text_input("spread1")
+        spread1=st.text_input("spread1 - (-7.964984 - -2.4340310")
     with col2:
-        spread2=st.text_input("spread2")
+        spread2=st.text_input("spread2 - (0.006274 - 0.450493)")
     with col3:
-       D2=st.text_input("D2")
+       D2=st.text_input("D2 - (1.423287 - 3.6711550")
     with col4:
-        PPE=st.text_input("PPE")
+        PPE=st.text_input("PPE - (0.044539 - 0.527367)")
     #code for prediction
     Parkinsons_diagnosis =''
 
