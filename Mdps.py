@@ -248,7 +248,7 @@ if selected == 'Liver Disease Prediction':
     with col3:
         Total_Bilirubin=st.text_input("Total_Bilirubin(0.4 - 75.0)")
     with col1:
-        Alkaline_Phosphotase=st.text_input("Alkaline_Phosphotase(63.0 - 2110.0)")
+        Alkaline_Phosphotase=st.text_input( " Alkaline_Phosphotase       (63.0 - 2110.0)")
     with col2:
         Alamine_Aminotransferase=st.text_input("Alamine_Aminotransferase(10.0 - 2000.0)")
     with col3:
@@ -321,7 +321,7 @@ if selected == 'Parkinsons Disease Prediction':
     with col2:
         spread2=st.text_input("spread2 - (0.006274 - 0.450493)")
     with col3:
-       D2=st.text_input("D2 - (1.423287 - 3.6711550")
+       D2=st.text_input("D2 - (1.423287 - 3.6711550)")
     with col4:
         PPE=st.text_input("PPE - (0.044539 - 0.527367)")
     #code for prediction
